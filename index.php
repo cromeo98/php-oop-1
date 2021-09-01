@@ -45,6 +45,7 @@ $secondMovie->avgVote = $avgVote;
 
 var_dump($secondMovie);
 
-echo $firstMovie;
+print_r($firstMovie);
+print_r($secondMovie);
 
 ?>
