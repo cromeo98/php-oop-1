@@ -26,9 +26,6 @@ class Movie{
         return array_sum($vote)/count($vote);
     }
 
-    public function __toString(){
-     return $this->Name . ' '. $this->Number;
-    }
 }
 
 $firstMovie = new Movie('Inglourious Basterds', 2009);
@@ -44,8 +41,4 @@ $avgVote = $secondMovie->getAvgVote();
 $secondMovie->avgVote = $avgVote;
 
 var_dump($secondMovie);
-
-print_r($firstMovie);
-print_r($secondMovie);
-
 ?>
