@@ -26,6 +26,9 @@ class Movie{
         return array_sum($vote)/count($vote);
     }
 
+    public function printMovies(){
+        return $this->title . '<br>' . $this->year . '<br>' . $this->avgVote . '<br>' . $this->mainCharacter;
+    }
 }
 
 $firstMovie = new Movie('Inglourious Basterds', 2009);
@@ -35,10 +38,14 @@ $firstMovie->avgVote = $avgVote;
 
 var_dump($firstMovie);
 
+echo $firstMovie->printMovies();
+
 $secondMovie = new Movie('JoJo Rabbit', 2019);
 $secondMovie->mainCharacter = 'Roman Griffin Davis';
 $avgVote = $secondMovie->getAvgVote();
 $secondMovie->avgVote = $avgVote;
 
 var_dump($secondMovie);
+
+echo $secondMovie->printMovies();
 ?>
